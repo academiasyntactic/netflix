@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="icon" href="">
+  </head>
+  <body>
+    <div class="h-screen bg-black flex items-center justify-center">
+      <div class="flex flex-col gap-2 items-center justify-center w-[80%]">
+        <img class="w-[50%]" src="img/logos_netflix.png" alt="" />
+        <input id="usuario" placeholder="Usuario" type="text" />
+        <input id="contraseña" placeholder="Contraseña" type="text" />
+        <button class="bg-red-500 boton">Iniciar sesion</button>
+      </div>
+    </div>
+
+    <script>
+      const usuario = $("#usuario");
+      const contraseña = $("#contraseña");
+      const boton = $(".boton");
+
+      const usuarioRegistrado = "admin@gmail.com";
+      const contraseñaRegistrada = "hola12345";
+
+      boton.click(
+        function () {
+        const valor1 = usuario.val();
+        const valor2 = contraseña.val();
+
+        if (valor1 == usuarioRegistrado && valor2 == contraseñaRegistrada) {
+          alert("Puede pasar");
+          window.location.href = "index.html";
+        } else {
+          alert("No puede pasar");
+        }
+      });
+    </script>
+  </body>
+</html>
